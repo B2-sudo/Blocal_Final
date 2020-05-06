@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <title>Signup </title>
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Registration Details For Blocal</h2>
+                    <form method="POST" action='/signup'>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" >First Name</label>
+                                    <input class="input--style-4" type="text" name="firstName" required >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label" >Last Name</label>
+                                    <input class="input--style-4" type="text" name="lastName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Password</label> 
+                                <input class="input--style-4" type="password" name="password" id="alp" required>
+                                <div id="message">
+                                    <p>Password Must Be Of Minimum 8 Characters</p>
+                                </div>
+                            </div> 
+                        </div> 
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Confirm Password</label> 
+                                <input class="input--style-4" type="password" name="passwordConfirm" id="bet" required>
+                                <div id="message1">
+                                    <p>Passwords Do Not Match</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label" required>Age</label> 
+                                <input class="input--style-4" type="text" name="age" required>
+                            </div> 
+                    
+                        </div>
+
+                        <div class="row row-space">
+                            
+                        
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Any Disease of the given ones?</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Thermocytopenia,Diabetes, Sexually Transmitted Disease , Viral Infection,      Bacterial Infection
+                                            <input type="radio" checked="checked" name="disease" value="on">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">None
+                                            <input type="radio" name="disease" value="off">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Mobile Number</label>
+                                    <input class="input--style-4" type="text" name="mobileNumber">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Blood Group</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="bloodGroup" required>
+                                        <option disabled="disabled" selected="selected">Choose Blood Group</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>Bombay Blood Group</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">City</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="city" required>
+                                        <option disabled="disabled" selected="selected">Choose Your City</option>
+                                        <option>Barhi</option>
+                                        <option>Bokaro</option>
+                                        <option>Dhanbad</option>
+                                        <option>Daltonganj</option>
+                                        <option>Hazaribagh</option>
+                                        <option>Jamshedpur</option>
+                                        <option>Koderma</option>
+                                        <option>Latehar</option>
+                                        <option>Ranchi</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Sign Up</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <script src="global.js"></script>
+
+    <script>
+        var pass1=document.getElementById("alp");
+        var pass2=document.getElementById("bet");
+        pass1.onfocus = function() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        pass1.onblur = function() {
+            document.getElementById("message").style.display = "none";
+        }
+
+        pass1.onkeyup=function() {
+            if(pass1.value.length>=8)
+                document.getElementById("message").style.display="none";
+
+        }
+        pass2.onfocus = function() {
+            document.getElementById("message1").style.display = "block";
+        }
+
+        pass2.onblur = function() {
+            document.getElementById("message1").style.display = "none";
+        }
+
+        pass2.onkeyup=function() {
+            if(pass1.value===pass2.value)
+                document.getElementById("message1").style.display="none";
+            else document.getElementById("message1").style.display = "block";
+
+        }
+
+        
+        
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->

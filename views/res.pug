@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title Donors
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(http-equiv="Content-Type" content="text/html")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(href="/css4res.css" rel='stylesheet')
+            
+    body
+
+       header(class="w3-container w3-white w3-center" )
+            h1(class="w3-margin w3-jumbo" style="background-color:#e22121;color:#FFFFFF;") Donors List
+
+       div(class="w3-row-padding w3-padding-64 w3-container")
+            div(class="w3-content")
+                div(class="w3-twothird")
+                    ul
+                         each val in olduser  
+                            li(class="w3-text-darkred" style="font-family: 'Lato', sans-serif;font-size:44px;color:#e22121")=val.firstName+' '+val.lastName
+                            h5(class="w3-text-darkred" style="color:#e22121")='Mobile Number:'+val.mobileNumber
+                                p(class="w3-text-darkred" style="color:#e22121")='Email:'+val.email
